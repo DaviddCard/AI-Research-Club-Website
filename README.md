@@ -1,15 +1,20 @@
 # AI Research Club Website
 
-Official website repo for the AI Research Club.
+Official website repository for the AI Research Club at CSULB.
 
-## Tech
-- HTML, CSS, Vanilla JS
-- Canvas background animation
-- GSAP + ScrollTrigger for scroll effects
+We host workshops, project nights, research talks, and community events for students interested in AI, machine learning, and data science.
 
-## Run locally
-Open index.html directly, or run a local server:
+## Live Site
+This site is deployed with GitHub Pages.
 
+## Tech Stack
+- HTML, CSS, Vanilla JavaScript
+- GSAP + ScrollTrigger for scroll animations
+- Canvas based background animation
+
+## Local Development
+Option 1, open `index.html` directly.
+
+Option 2, run a local server (recommended):
+```bash
 python3 -m http.server 8000
-
-Then visit http://localhost:8000
