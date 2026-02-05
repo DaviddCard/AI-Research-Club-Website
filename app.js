@@ -1,5 +1,3 @@
-// AI Research Club - Scroll FX (GSAP + ScrollTrigger)
-// Free static setup suitable for GitHub Pages / Netlify.
 
 (function () {
   const header = document.querySelector('.site-header');
@@ -26,7 +24,6 @@
   if (window.gsap && window.ScrollTrigger) {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Section heading "Anduril-like" horizontal shift tied to scroll progress
     document.querySelectorAll('[data-shift="true"]').forEach((el) => {
       gsap.to(el, {
         x: 120,
@@ -310,4 +307,19 @@
     updateOverlay();
   }
 
+})();
+
+const calendarEmbed = ""; // e.g. https://calendar.google.com/calendar/embed?src=...
+const calendarIcs = "";   // e.g. https://calendar.google.com/calendar/ical/.../public/basic.ics
+const calendarWeb = "";   // e.g. https://calendar.google.com/calendar/u/0?cid=...
+
+(function wireEventsLinks(){
+  const iframe = document.querySelector('.embed-wrap iframe');
+  if (iframe && calendarEmbed && !iframe.getAttribute('src')) iframe.setAttribute('src', calendarEmbed);
+
+  const sub = document.getElementById('subscribeLink');
+  if (sub && calendarIcs) sub.setAttribute('href', calendarIcs);
+
+  const cal = document.getElementById('calendarLink');
+  if (cal && calendarWeb) cal.setAttribute('href', calendarWeb);
 })();

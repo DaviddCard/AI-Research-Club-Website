@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Events | AI Research Club at CSULB</title>
+  <meta name="description"
+    content="AI Research Club at CSULB. Workshops, research talks, projects, and a community for students building in AI, machine learning, and data science." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta property="og:title" content="Events | AI Research Club at CSULB" />
+  <meta property="og:description"
+    content="Workshops, research talks, projects, and a community for students building in AI and data science." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body id="top">
+  <a class="skip-link" href="index.html#mission">Skip to content</a>
+  <div class="ui-overlay" aria-hidden="true"></div>
+  <canvas class="matrix-layer" id="matrixLayer" aria-hidden="true"></canvas>
+
+  <div class="ui-shapes" aria-hidden="true">
+    <svg viewBox="0 0 1600 900" preserveAspectRatio="none">
+      <g class="shape shape-a">
+        <circle class="ring" cx="520" cy="470" r="130" />
+        <circle class="ring ring-dashed" cx="520" cy="470" r="220" />
+        <line class="line" x1="520" y1="120" x2="520" y2="820" />
+        <line class="line" x1="180" y1="470" x2="860" y2="470" />
+        <circle class="dot" cx="520" cy="470" r="6" />
+        <circle class="dot" cx="520" cy="250" r="4" />
+        <circle class="dot" cx="520" cy="690" r="4" />
+        <g class="orbit orbit-a-0">
+          <circle class="planet" cx="680" cy="470" r="3" />
+          <animateTransform attributeName="transform" type="rotate" from="0 520 470" to="360 520 470" dur="90s"
+            repeatCount="indefinite" />
+        </g>
+        <g class="orbit orbit-a-1">
+          <circle class="planet" cx="740" cy="470" r="2.5" />
+          <animateTransform attributeName="transform" type="rotate" from="0 520 470" to="360 520 470" dur="120s"
+            repeatCount="indefinite" />
+        </g>
+        <g class="orbit orbit-a-2">
+          <circle class="planet faint" cx="780" cy="470" r="2.5" />
+          <animateTransform attributeName="transform" type="rotate" from="0 520 470" to="360 520 470" dur="150s"
+            repeatCount="indefinite" />
+        </g>
+      </g>
+
+      <g class="shape shape-b">
+        <circle class="ring" cx="1180" cy="520" r="90" />
+        <circle class="ring ring-dashed" cx="1180" cy="520" r="160" />
+        <polyline class="line" points="980,640 1180,520 1400,420" />
+        <circle class="dot" cx="980" cy="640" r="4" />
+        <circle class="dot" cx="1180" cy="520" r="6" />
+        <circle class="dot" cx="1400" cy="420" r="4" />
+        <g class="orbit orbit-b-0">
+          <circle class="planet" cx="1300" cy="520" r="3" />
+          <animateTransform attributeName="transform" type="rotate" from="0 1180 520" to="360 1180 520" dur="90s"
+            repeatCount="indefinite" />
+        </g>
+        <g class="orbit orbit-b-1">
+          <circle class="planet" cx="1340" cy="520" r="2.5" />
+          <animateTransform attributeName="transform" type="rotate" from="0 1180 520" to="360 1180 520" dur="120s"
+            repeatCount="indefinite" />
+        </g>
+        <g class="orbit orbit-b-2">
+          <circle class="planet faint" cx="1380" cy="520" r="2.5" />
+          <animateTransform attributeName="transform" type="rotate" from="0 1180 520" to="360 1180 520" dur="150s"
+            repeatCount="indefinite" />
+        </g>
+      </g>
+
+      <g class="shape shape-c">
+        <rect class="box" x="170" y="160" width="120" height="90" rx="10" />
+        <rect class="box" x="210" y="640" width="160" height="110" rx="12" />
+        <rect class="box" x="1320" y="170" width="120" height="90" rx="10" />
+        <rect class="box" x="1280" y="650" width="150" height="100" rx="12" />
+      </g>
+
+      <g class="shape shape-d">
+        <line class="line faint" x1="0" y1="590" x2="1600" y2="590" />
+        <line class="line faint" x1="0" y1="330" x2="1600" y2="330" />
+        <line class="line faint" x1="800" y1="0" x2="800" y2="900" />
+      </g>
+    </svg>
+  </div>
+
+
+  <header id="header" class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="AI Research Club home">
+        <span class="brand-mark">AI</span>
+        <span class="brand-text">Research Club</span>
+        <span class="brand-sub">CSULB</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+
+        <ul class="nav-links">
+          <li><a href="index.html#mission">Mission</a></li>
+          <li><a href="index.html#focus">Focus Areas</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="events.html" aria-current="page">Events</a></li>
+        <li><a href="index.html#officers">Officers</a></li>
+          <li><a href="index.html#join" class="nav-cta">Join</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-social" aria-label="Social links">
+        <a href="https://www.instagram.com/csulb_ai_research/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.linkedin.com/company/csulb-arc/posts/?feedView=all" target="_blank"
+          rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="pill-row">
+        <span class="pill">CSULB</span>
+        <span class="pill">Workshops</span>
+        <span class="pill">Talks</span>
+        <span class="pill">Projects</span>
+      </div>
+
+      <h1 class="hero-title">Upcoming <span class="gloss-pink">events</span> and community nights.</h1>
+      <p class="hero-subtitle">
+        This page is built to be easy to maintain. Events can be published from a shared calendar, and the site updates automatically.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#calendar">View calendar</a>
+        <a class="btn btn-secondary" href="#submit">Submit an event</a>
+      </div>
+
+      <div class="hero-metrics">
+        <div class="metric">
+          <div class="metric-k">Format</div>
+          <div class="metric-v">Workshops, demos, study jams</div>
+        </div>
+        <div class="metric">
+          <div class="metric-k">Audience</div>
+          <div class="metric-v">All majors, beginner-friendly</div>
+        </div>
+        <div class="metric">
+          <div class="metric-k">Updates</div>
+          <div class="metric-v">Auto from calendar</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="calendar">
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker">Events</p>
+        <h2 class="section-title">Calendar.</h2>
+        <p class="subtle">If the embed is blank right now, it just means the shared calendar hasn’t been connected yet.</p>
+      </div>
+
+      <div class="panel">
+        <h3>Live calendar embed</h3>
+        <p class="small">Replace the iframe <code>src</code> with your club’s public Google Calendar embed link.</p>
+        <div class="embed-wrap">
+          <!-- TODO: replace src with your public Google Calendar embed URL -->
+          <iframe
+            title="AI Research Club Events Calendar"
+            src=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            frameborder="0">
+          </iframe>
+        </div>
+        <div class="divider"></div>
+        <div class="link-list">
+          <a href="#" id="subscribeLink">Subscribe (iCal)</a>
+          <a href="#" id="calendarLink">Open in Google Calendar</a>
+        </div>
+        <p class="tiny" style="margin-top:10px;">Tip: Once a calendar is public, whoever manages it can add/edit events without touching the website.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="submit">
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker">For officers</p>
+        <h2 class="section-title">How to publish events, without editing code.</h2>
+      </div>
+
+      <div class="cards two">
+        <div class="card">
+          <div class="tag-row">
+            <span class="tag">Recommended</span>
+            <span class="tag">Free</span>
+          </div>
+          <h3>Google Calendar as the source of truth</h3>
+          <p>Make a shared club calendar. Publish it. Paste the embed link on this page once. After that, updates are automatic.</p>
+        </div>
+
+        <div class="card">
+          <div class="tag-row">
+            <span class="tag">Alternative</span>
+            <span class="tag">Also free</span>
+          </div>
+          <h3>Luma or Eventbrite</h3>
+          <p>Create events in a tool designed for RSVPs. Embed the public events list here. Great if you want registrations and reminders.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+  <footer id="footer" class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="brand footer-brandline">
+          <span class="brand-mark">AI</span>
+          <span class="brand-text">Research Club</span>
+          <span class="brand-sub">CSULB</span>
+        </div>
+        <p class="small">
+          Build applied AI with real constraints. Student-led at California State University, Long Beach.
+        </p>
+        <p class="small">
+          Contact: <a class="link" href="mailto:ai.researchcsulb@gmail.com">ai.researchcsulb@gmail.com</a>
+        </p>
+        <p class="tiny">© AI Research Club, CSULB. All rights reserved.</p>
+        <p class="tiny credit">Designed and Built by David Card</p>
+      </div>
+
+      <div class="footer-cols">
+        <div class="footer-col">
+          <p class="footer-title">Club</p>
+          <a href="index.html#mission">Mission</a>
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#officers">Officers</a>
+          <a href="index.html#join">Join</a>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-title">Social</p>
+          <a href="https://www.instagram.com/csulb_ai_research/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.linkedin.com/company/csulb-arc/posts/?feedView=all" target="_blank"
+            rel="noopener noreferrer">LinkedIn</a>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-title">Contact</p>
+          <a class="link" href="mailto:ai.researchcsulb@gmail.com">ai.researchcsulb@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GSAP for scroll-linked motion (free CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
