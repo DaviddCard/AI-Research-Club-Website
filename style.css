@@ -258,16 +258,17 @@ body{ position:relative; z-index:0; }
   position:sticky;
   top:0;
   z-index:2000;
-  background:linear-gradient(to bottom, rgba(5,7,11,.85), rgba(5,7,11,.45));
-  backdrop-filter: blur(14px);
+  background:linear-gradient(to bottom, rgba(5,7,11,.82), rgba(5,7,11,.55));
+  backdrop-filter: blur(18px);
   border-bottom:1px solid rgba(255,255,255,.06);
 }
 .header-inner{
   display:flex;
   align-items:center;
-  justify-content:space-between;
-  gap:18px;
-  padding:18px 0;
+  justify-content:center;
+  gap:42px;
+  padding:22px 0;
+  position:relative;
 }
 
 .brand{
@@ -289,11 +290,13 @@ body{ position:relative; z-index:0; }
   text-transform:uppercase;
 }
 
+
 .site-nav{
   display:flex;
   align-items:center;
-  gap:14px;
+  gap:22px;
 }
+
 .nav-toggle{
   display:none;
   width:44px;height:44px;
@@ -317,17 +320,23 @@ body{ position:relative; z-index:0; }
   padding:0;margin:0;
 }
 .nav-links a{
-  font-size:14px;
-  color:rgba(255,255,255,.86);
-  padding:10px 10px;
-  border-radius:12px;
+  position:relative;
+  padding:6px 4px;
+  border-radius:0;
+  color:rgba(255,255,255,.82);
+  font-weight:500;
+  font-size:.92rem;
+  letter-spacing:.02em;
+  transition: color .18s ease, opacity .18s ease;
 }
-.nav-links a:hover{
-  background:rgba(255,255,255,.04);
-}
+
 .nav-cta{
-  border:1px solid rgba(255,255,255,.12);
-  background:rgba(255,255,255,.03);
+  background: linear-gradient(90deg,#ffcc00,#ffb800);
+  color:#000;
+  font-weight:700;
+  border-radius:12px;
+  padding:8px 14px;
+  border:none;
 }
 
 .header-social{
@@ -841,3 +850,81 @@ main, header, footer, section{ position: relative; z-index: 10; }
 @media (prefers-reduced-motion: reduce){
   .matrix-layer{ display:none; }
 }
+
+
+
+/* ===== NAV BRAND (BruinAI-style left logo, club mark) ===== */
+
+.brand-link{ display:flex; align-items:center; }
+
+.club-mark{
+  width: 360px; /* base width */
+  height:auto;
+  object-fit:contain;
+  transform: scale(1.45); /* makes image visually larger */
+  transform-origin: left center;
+  filter: drop-shadow(0 0 26px rgba(255,204,0,.22));
+}
+
+/* link hover underline without layout shift */
+.nav-links a{
+  position:relative;
+  padding:10px 10px;
+  border-radius:999px;
+}
+
+
+
+
+
+/* CSULB gold CTA */
+.nav-cta{
+  background: linear-gradient(90deg,#ffcc00,#ffb800);
+  color:#000;
+  font-weight:700;
+  border:none;
+  border-radius:999px;
+  padding:10px 14px;
+}
+
+.nav-cta:hover{ opacity:.95; }
+
+.club-mark{
+  width:78px;
+  height:78px;
+  object-fit:contain;
+  filter: drop-shadow(0 0 18px rgba(255,204,0,.25));
+}
+
+.nav-links a:hover{
+  color: #ffcc00;
+}
+
+.nav-cta{
+  background: linear-gradient(90deg,#ffcc00,#ffb800);
+  color:#000;
+  font-weight:700;
+  border-radius:12px;
+  padding:8px 14px;
+  border:none;
+}
+
+.nav-cta:hover{
+  opacity:.95;
+}
+
+.header-social{
+  position:absolute;
+  right:0;
+  display:flex;
+  gap:18px;
+  align-items:center;
+}
+
+.nav-brand{
+  position:absolute;
+  left:10px;
+  display:flex;
+  align-items:center;
+}
+.brand-link{ display:flex; align-items:center; }

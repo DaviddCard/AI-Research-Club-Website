@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="index.html#main">Skip to content</a>
 
   <!-- ambient UI layers -->
   <div class="ui-overlay" aria-hidden="true"></div>
@@ -41,33 +41,26 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <span class="brand-mark">AI</span>
-        <span class="brand-text">Research Club</span>
-        <span class="brand-sub">CSULB</span>
-      </a>
-
       <nav class="site-nav" aria-label="Primary">
-        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-        <ul class="nav-links">
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#programs">Programs</a></li>
-          <li><a href="index.html#officers">Officers</a></li>
-          <li><a href="events.html" aria-current="page">Events</a></li>
-          <li><a class="nav-cta" href="index.html#join">Join</a></li>
-        </ul>
+  <div class="nav-brand">
+    <a class="brand-link" href="index.html" aria-label="AI Research Club CSULB Home">
+      <img src="img/club-nav-logo.png" alt="AI Club CSULB logo" class="club-mark"/>
+    </a>
+  </div>
 
-        <div class="header-social" aria-label="Social links">
-          <a href="#" aria-label="Instagram">Instagram</a>
-          <a href="#" aria-label="Discord">Discord</a>
-        </div>
+  <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span>
+  </button>
 
-        <a class="header-logo" href="index.html" aria-label="AI Club CSULB Home">
-          <img src="img/club-logo.png" alt="AI Club CSULB logo" />
-        </a>
-      </nav>
+  <ul class="nav-links">
+    <li><a href="index.html#mission">Mission</a></li>
+    <li><a href="index.html#focus">Focus Areas</a></li>
+    <li><a href="index.html#projects">Projects</a></li>
+    <li><a href="index.html#officers">Officers</a></li>
+    <li><a href="events.html" aria-current="page">Events</a></li>
+    <li><a href="index.html#join" class="nav-cta">Join</a></li>
+  </ul>
+</nav>
     </div>
   </header>
 
@@ -83,7 +76,7 @@
         <p class="hero-subtitle">This page stays up to date automatically from our club calendar. If you can add events to the calendar, your updates will show up here without touching code.</p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#calendar">View calendar</a>
+          <a class="btn btn-primary" href="index.html#calendar">View calendar</a>
           <a class="btn btn-secondary" href="mailto:ai.researchcsulb@gmail.com?subject=AI%20Club%20Event%20Submission">Submit an event</a>
         </div>
       </div>
