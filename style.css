@@ -1,5 +1,10 @@
 
 :root{
+  --gold-1:#ffcc00;
+  --gold-2:#ffe17a;
+  --gold-3:#ffb800;
+  --ink:#0a0b10;
+
   --bg:#05070b;
   --panel:rgba(255,255,255,.045);
   --panel2:rgba(255,255,255,.03);
@@ -9,8 +14,6 @@
   --muted2:rgba(255,255,255,.52);
   --accent:#55c2ff;
   --accent2:#7c3aed;
-  --pink:#ff4fd8;
-  --pink2:#b36bff;
 
   --radius:22px;
   --shadow:0 18px 60px rgba(0,0,0,.55);
@@ -36,6 +39,58 @@ body{
 a{color:inherit; text-decoration:none}
 a:hover{opacity:.92}
 p{margin:0}
+
+
+/* ===== glossy CSULB gold accents ===== */
+.glossy-gold{
+  background: linear-gradient(90deg, var(--gold-1) 0%, var(--gold-2) 35%, var(--gold-3) 65%, var(--gold-1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow:
+    0 0 22px rgba(255, 204, 0, .18),
+    0 0 44px rgba(255, 204, 0, .10);
+}
+
+/* header logo (top right) */
+.header-logo{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:44px;
+  height:44px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.03);
+  overflow:hidden;
+}
+.header-logo img{
+  width:36px;
+  height:36px;
+  object-fit:contain;
+  display:block;
+  filter: drop-shadow(0 10px 24px rgba(0,0,0,.55));
+}
+
+/* Events page: responsive calendar */
+.calendar-embed{
+  border-radius: var(--radius);
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.08);
+  background: rgba(255,255,255,.02);
+}
+.calendar-embed iframe{
+  width:100%;
+  height: min(72vh, 760px);
+  min-height: 560px;
+  border:0;
+  display:block;
+}
+
+@media (max-width: 700px){
+  .calendar-embed iframe{ min-height: 520px; }
+}
+
 
 .skip-link{
   position:absolute;
@@ -193,22 +248,6 @@ body{ position:relative; z-index:0; }
   .ui-overlay{ opacity:.08; }
 }
 
-
-/* ===== glossy accent text (BruinAI-ish) ===== */
-.gloss-pink{
-  background: linear-gradient(90deg, var(--pink), var(--pink2), var(--pink));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-shadow:
-    0 0 18px rgba(255,79,216,.18),
-    0 0 28px rgba(179,107,255,.12);
-}
-.gloss-pink::selection{
-  color: var(--text);
-  background: rgba(255,79,216,.25);
-}
-
 /* ===== layout ===== */
 .container{
   width:min(1120px, 92%);
@@ -285,10 +324,6 @@ body{ position:relative; z-index:0; }
 }
 .nav-links a:hover{
   background:rgba(255,255,255,.04);
-}
-.nav-links a[aria-current="page"]{
-  background:rgba(255,79,216,.10);
-  border:1px solid rgba(255,79,216,.22);
 }
 .nav-cta{
   border:1px solid rgba(255,255,255,.12);
@@ -610,7 +645,7 @@ body{ position:relative; z-index:0; }
 
 .advisor-card{
   display:grid;
-  grid-template-columns: 56px 1fr;
+  grid-template-columns: 1fr;
   gap:14px;
   align-items:center;
   background: rgba(255,255,255,.018);
@@ -805,23 +840,4 @@ main, header, footer, section{ position: relative; z-index: 10; }
 
 @media (prefers-reduced-motion: reduce){
   .matrix-layer{ display:none; }
-}
-
-
-/* events embed */
-.embed-wrap{
-  margin-top:14px;
-  border:1px solid rgba(255,255,255,.08);
-  background: rgba(0,0,0,.22);
-  border-radius:18px;
-  overflow:hidden;
-  aspect-ratio: 16 / 9;
-}
-.embed-wrap iframe{
-  width:100%;
-  height:100%;
-  border:0;
-}
-@media (max-width: 700px){
-  .embed-wrap{ aspect-ratio: 3 / 4; }
 }
