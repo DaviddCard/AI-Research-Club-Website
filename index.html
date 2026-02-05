@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AI Research Club at CSULB. Learn, build, and ship applied AI with real constraints." />
+  <title>AI Research Club | CSULB</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body id="top">
+  <a class="skip-link" href="#mission">Skip to content</a>
+  <div class="ui-overlay" aria-hidden="true"></div>
+  <canvas class="matrix-layer" id="matrixLayer" aria-hidden="true"></canvas>
+
+  <div class="ui-shapes" aria-hidden="true">
+    <svg viewBox="0 0 1600 900" preserveAspectRatio="none">
+      <g class="shape shape-a">
+        <circle class="ring" cx="520" cy="470" r="130"/>
+        <circle class="ring ring-dashed" cx="520" cy="470" r="220"/>
+        <line class="line" x1="520" y1="120" x2="520" y2="820"/>
+        <line class="line" x1="180" y1="470" x2="860" y2="470"/>
+        <circle class="dot" cx="520" cy="470" r="6"/>
+        <circle class="dot" cx="520" cy="250" r="4"/>
+        <circle class="dot" cx="520" cy="690" r="4"/>
+        <g class="orbit orbit-a-0">
+          <circle class="planet" cx="680" cy="470" r="3"/>
+          <animateTransform attributeName="transform" type="rotate" from="0 520 470" to="360 520 470" dur="90s" repeatCount="indefinite"/>
+        </g>
+        <g class="orbit orbit-a-1">
+          <circle class="planet" cx="740" cy="470" r="2.5"/>
+          <animateTransform attributeName="transform" type="rotate" from="0 520 470" to="360 520 470" dur="120s" repeatCount="indefinite"/>
+        </g>
+        <g class="orbit orbit-a-2">
+          <circle class="planet faint" cx="780" cy="470" r="2.5"/>
+          <animateTransform attributeName="transform" type="rotate" from="0 520 470" to="360 520 470" dur="150s" repeatCount="indefinite"/>
+        </g>
+      </g>
+
+      <g class="shape shape-b">
+        <circle class="ring" cx="1180" cy="520" r="90"/>
+        <circle class="ring ring-dashed" cx="1180" cy="520" r="160"/>
+        <polyline class="line" points="980,640 1180,520 1400,420"/>
+        <circle class="dot" cx="980" cy="640" r="4"/>
+        <circle class="dot" cx="1180" cy="520" r="6"/>
+        <circle class="dot" cx="1400" cy="420" r="4"/>
+        <g class="orbit orbit-b-0">
+          <circle class="planet" cx="1300" cy="520" r="3"/>
+          <animateTransform attributeName="transform" type="rotate" from="0 1180 520" to="360 1180 520" dur="90s" repeatCount="indefinite"/>
+        </g>
+        <g class="orbit orbit-b-1">
+          <circle class="planet" cx="1340" cy="520" r="2.5"/>
+          <animateTransform attributeName="transform" type="rotate" from="0 1180 520" to="360 1180 520" dur="120s" repeatCount="indefinite"/>
+        </g>
+        <g class="orbit orbit-b-2">
+          <circle class="planet faint" cx="1380" cy="520" r="2.5"/>
+          <animateTransform attributeName="transform" type="rotate" from="0 1180 520" to="360 1180 520" dur="150s" repeatCount="indefinite"/>
+        </g>
+      </g>
+
+      <g class="shape shape-c">
+        <rect class="box" x="170" y="160" width="120" height="90" rx="10"/>
+        <rect class="box" x="210" y="640" width="160" height="110" rx="12"/>
+        <rect class="box" x="1320" y="170" width="120" height="90" rx="10"/>
+        <rect class="box" x="1280" y="650" width="150" height="100" rx="12"/>
+      </g>
+
+      <g class="shape shape-d">
+        <line class="line faint" x1="0" y1="590" x2="1600" y2="590"/>
+        <line class="line faint" x1="0" y1="330" x2="1600" y2="330"/>
+        <line class="line faint" x1="800" y1="0" x2="800" y2="900"/>
+      </g>
+    </svg>
+  </div>
+
+
+  <header id="header" class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="AI Research Club home">
+        <span class="brand-mark">AI</span>
+        <span class="brand-text">Research Club</span>
+        <span class="brand-sub">CSULB</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+
+        <ul class="nav-links">
+          <li><a href="#mission">Mission</a></li>
+          <li><a href="#focus">Focus Areas</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#officers">Officers</a></li>
+          <li><a href="#join" class="nav-cta">Join</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-social" aria-label="Social links">
+        <a href="https://www.instagram.com/csulb_ai_research/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.linkedin.com/company/csulb-arc/posts/?feedView=all" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</div>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container hero-inner">
+        <div class="pill-row" id="year">
+          <span class="pill">Spring 2026</span>
+          <span class="pill">CSULB</span>
+        </div>
+
+        <h1 class="hero-title">
+          Build applied AI that ships.
+        </h1>
+
+        <p class="hero-subtitle">
+          Student-led at California State University, Long Beach. Workshops, reading groups, and project teams focused on modern ML, LLMs, and data.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#join">Get Involved</a>
+          <a class="btn btn-secondary" href="#projects">Explore Projects</a>
+        </div>
+
+        <div class="hero-metrics">
+          <div class="metric">
+            <div class="metric-k">Weekly</div>
+            <div class="metric-v">Workshops</div>
+          </div>
+          <div class="metric">
+            <div class="metric-k">Beginner-Friendly</div>
+            <div class="metric-v">Reading Groups</div>
+          </div>
+          <div class="metric">
+            <div class="metric-k">Team-Based</div>
+            <div class="metric-v">Build Sprints</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mission" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Mission</p>
+          <h2 class="section-title shift" data-shift="true">A modern, industry-relevant slice of AI, taught with real constraints.</h2>
+        </div>
+
+        <div class="split">
+          <p class="lead" data-reveal="fade-up">
+            We focus on practical systems: data quality, evaluation, iteration loops, and shipping workflows. Members learn by building and reviewing each other’s work.
+          </p>
+
+          <div class="panel" data-reveal="fade-up">
+            <h3>What We Do</h3>
+            <ul class="bullets">
+              <li>Workshops on ML fundamentals, LLMs, and data workflows</li>
+              <li>Research reading groups designed for beginners</li>
+              <li>Project teams, mentorship, demos, and portfolio-ready deliverables</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="focus" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Focus Areas</p>
+          <h2 class="section-title shift" data-shift="true">Where we spend our time.</h2>
+        </div>
+
+        <div class="cards three" data-stagger="true">
+          <article class="card">
+            <div class="tag-row">
+              <span class="tag">ML</span>
+              <span class="tag">Core</span>
+            </div>
+            <h3>Machine Learning</h3>
+            <p>Classification, regression, model selection, and evaluation that actually holds up.</p>
+          </article>
+
+          <article class="card">
+            <div class="tag-row">
+              <span class="tag">LLMs</span>
+              <span class="tag">NLP</span>
+            </div>
+            <h3>LLMs and Applied NLP</h3>
+            <p>Prompting, retrieval, fine-tuning basics, safety, and practical app patterns.</p>
+          </article>
+
+          <article class="card">
+            <div class="tag-row">
+              <span class="tag">Data</span>
+              <span class="tag">Ops</span>
+            </div>
+            <h3>Data and Tooling</h3>
+            <p>Dataset curation, labeling workflows, vector search, and instrumentation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Projects</p>
+          <h2 class="section-title shift" data-shift="true">Examples of what we can build together.</h2>
+          <p class="subtle">Taught by Tech Lead David Card.</p>
+        </div>
+
+        <div class="cards two" data-stagger="true">
+          <article class="card">
+            <div class="tag-row">
+              <span class="tag">Datasets</span>
+              <span class="tag">ML</span>
+            </div>
+            <h3>Dataset Deep Dives</h3>
+            <p>How to source, clean, document, and evaluate datasets for real training runs.</p>
+            <a class="link" href="#join">Get Involved →</a>
+          </article>
+
+          <article class="card">
+            <div class="tag-row">
+              <span class="tag">Chatbots</span>
+              <span class="tag">RAG</span>
+            </div>
+            <h3>Club Knowledge Chatbot</h3>
+            <p>A retrieval-augmented assistant that answers from curated notes and papers.</p>
+            <a class="link" href="#join">Join the Team →</a>
+          </article>
+
+          <article class="card">
+            <div class="tag-row">
+              <span class="tag">Reviews</span>
+              <span class="tag">LLMs</span>
+            </div>
+            <h3>Modern AI Reviews</h3>
+            <p>Weekly breakdowns of new models, benchmarks, and what matters in practice.</p>
+            <a class="link" href="#join">Attend a Session →</a>
+          </article>
+
+          <article class="card">
+            <div class="tag-row">
+              <span class="tag">Evaluation</span>
+              <span class="tag">Systems</span>
+            </div>
+            <h3>Model Evaluation Harness</h3>
+            <p>Repeatable experiments, metrics dashboards, and cost/latency tracking.</p>
+            <a class="link" href="#join">Contribute →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="officers" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Officers</p>
+          <h2 class="section-title shift" data-shift="true">The people running the club.</h2>
+        </div>
+
+        <div class="officer-grid" data-stagger="true">
+<article class="officer-card tier-1">
+            <div class="avatar">SM</div>
+            <div class="officer-text">
+              <h3>Soroush Mirzaee</h3>
+              <p class="role">President</p>
+              <p class="meta">Keep picture the same (formerly Tech Lead).</p>
+            </div>
+          </article>
+
+<article class="officer-card tier-2">
+            <div class="avatar">JR</div>
+            <div class="officer-text">
+              <h3>Jason Ramirez</h3>
+              <p class="role">Vice President</p>
+            </div>
+          </article>
+
+<article class="officer-card tier-2">
+            <div class="avatar">DC</div>
+            <div class="officer-text">
+              <h3>David Cardenas</h3>
+              <p class="role">Tech Lead</p>
+            </div>
+          </article>
+
+<div class="row-divider" data-reveal="line" aria-hidden="true"></div>
+
+<article class="officer-card tier-2">
+            <div class="avatar">MY</div>
+            <div class="officer-text">
+              <h3>Mindy Yun</h3>
+              <p class="role">Treasurer</p>
+            </div>
+          </article>
+
+<article class="officer-card tier-2">
+            <div class="avatar">BL</div>
+            <div class="officer-text">
+              <h3>Bertrand Lee</h3>
+              <p class="role">Secretary</p>
+            </div>
+          </article>
+
+<article class="officer-card tier-3">
+            <div class="avatar">MU</div>
+            <div class="officer-text">
+              <h3>Mometa Uddin</h3>
+              <p class="role">Design Director</p>
+            </div>
+          </article>
+
+<div class="row-divider" data-reveal="line" aria-hidden="true"></div>
+
+<article class="officer-card tier-3">
+            <div class="avatar">CW</div>
+            <div class="officer-text">
+              <h3>Camille Wong</h3>
+              <p class="role">Project Executive</p>
+            </div>
+          </article>
+
+<article class="officer-card tier-3">
+            <div class="avatar">AG</div>
+            <div class="officer-text">
+              <h3>Amand Gantugs</h3>
+              <p class="role">Marketing Director</p>
+            </div>
+          </article>
+
+<article class="officer-card tier-3">
+            <div class="avatar">HZ</div>
+            <div class="officer-text">
+              <h3>Han Htoo Zin</h3>
+              <p class="role">Networking Director</p>
+              <p class="meta">No picture.</p>
+            </div>
+          </article>
+
+</div>
+      </div>
+    </section>
+
+    <section id="join" class="section">
+      <div class="container">
+        <div class="join">
+          <div class="join-left">
+            <p class="kicker">Join</p>
+            <h2 class="section-title shift" data-shift="true">Show up. Build something real. Ship it.</h2>
+            <p class="lead">Email us to get onboarded, or come to the next meeting.</p>
+          </div>
+
+          <div class="join-right panel">
+            <h3>Contact</h3>
+            <p><a class="link" href="mailto:ai.researchcsulb@gmail.com">ai.researchcsulb@gmail.com</a></p>
+            <div class="divider"></div>
+            <p class="small">Socials</p>
+            <div class="link-list">
+              <a href="https://www.instagram.com/csulb_ai_research/" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a href="https://www.linkedin.com/company/csulb-arc/posts/?feedView=all" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section id="advisors" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Community</p>
+          <h2 class="section-title shift" data-shift="true">Faculty advisors and mentors.</h2>
+        </div>
+
+        <div class="advisors-wrap" data-stagger="true">
+          <h3 class="subhead" data-reveal="fade-up">Faculty Advisors</h3>
+          <div class="advisor-grid">
+            <article class="advisor-card">
+              <div class="avatar avatar-circle">AH</div>
+              <div class="advisor-text">
+                <h4>Dr. Ava Hedayatipou</h4>
+                <p class="role">Faculty Advisor</p>
+              </div>
+            </article>
+
+            <article class="advisor-card">
+              <div class="avatar avatar-circle">DS</div>
+              <div class="advisor-text">
+                <h4>Debra Satterfield</h4>
+                <p class="role">ISSIP AI Collab Lead</p>
+              </div>
+            </article>
+
+            <article class="advisor-card">
+              <div class="avatar avatar-circle">AR</div>
+              <div class="advisor-text">
+                <h4>Dr. Amin Rezaei</h4>
+                <p class="role">Faculty Advisor</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="soft-divider" data-reveal="line" aria-hidden="true"></div>
+
+          <h3 class="subhead" data-reveal="fade-up">Club Mentors</h3>
+          <div class="advisor-grid">
+            <article class="advisor-card">
+              <div class="avatar avatar-circle">MG</div>
+              <div class="advisor-text">
+                <h4>Misha Ghosh</h4>
+                <p class="role">IDiyas, Chief Mentor</p>
+              </div>
+            </article>
+
+            <article class="advisor-card">
+              <div class="avatar avatar-circle">RV</div>
+              <div class="advisor-text">
+                <h4>Rahul Vishwakarma</h4>
+                <p class="role">Mentor</p>
+              </div>
+            </article>
+
+            <article class="advisor-card">
+              <div class="avatar avatar-circle">SM</div>
+              <div class="advisor-text">
+                <h4>Shrey Modi</h4>
+                <p class="role">Mentor</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="brand footer-brandline">
+          <span class="brand-mark">AI</span>
+          <span class="brand-text">Research Club</span>
+          <span class="brand-sub">CSULB</span>
+        </div>
+        <p class="small">
+          Build applied AI with real constraints. Student-led at California State University, Long Beach.
+        </p>
+        <p class="small">
+          Contact: <a class="link" href="mailto:ai.researchcsulb@gmail.com">ai.researchcsulb@gmail.com</a>
+        </p>
+        <p class="tiny">© AI Research Club, CSULB. All rights reserved.</p>
+        <p class="tiny credit">Designed and Built by David Card</p>
+      </div>
+
+      <div class="footer-cols">
+        <div class="footer-col">
+          <p class="footer-title">Club</p>
+          <a href="#mission">Mission</a>
+          <a href="#projects">Projects</a>
+          <a href="#officers">Officers</a>
+          <a href="#join">Join</a>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-title">Social</p>
+          <a href="https://www.instagram.com/csulb_ai_research/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.linkedin.com/company/csulb-arc/posts/?feedView=all" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</div>
+
+        <div class="footer-col">
+          <p class="footer-title">Contact</p>
+          <a class="link" href="mailto:ai.researchcsulb@gmail.com">ai.researchcsulb@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GSAP for scroll-linked motion (free CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <script src="app.js"></script>
+</body>
+</html>
