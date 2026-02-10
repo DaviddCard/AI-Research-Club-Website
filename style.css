@@ -614,6 +614,11 @@ body{ position:relative; z-index:0; }
 .tier-2{border-color: rgba(255,255,255,.08);}
 .tier-3{border-color: rgba(255,255,255,.08);}
 
+/* When the last officer row has a single card, keep it visually centered on desktop. */
+@media (min-width: 981px){
+  .officer-card.solo{ grid-column: 2 / span 1; }
+}
+
 
 /* subtle row dividers inside officer grid */
 .row-divider{
@@ -857,13 +862,16 @@ main, header, footer, section{ position: relative; z-index: 10; }
 
 .brand-link{ display:flex; align-items:center; }
 
+/* NOTE: Keep the nav logo stable across breakpoints.
+   The earlier "oversized" styling caused layout/placement issues (especially on mobile).
+   The definitive sizing lives in the later .club-mark rule. */
 .club-mark{
-  width: 360px; /* base width */
-  height:auto;
+  width:78px;
+  height:78px;
   object-fit:contain;
-  transform: scale(1.45); /* makes image visually larger */
-  transform-origin: left center;
-  filter: drop-shadow(0 0 26px rgba(255,204,0,.22));
+  transform:none;
+  transform-origin:left center;
+  filter: drop-shadow(0 0 18px rgba(255,204,0,.25));
 }
 
 /* link hover underline without layout shift */
@@ -889,12 +897,7 @@ main, header, footer, section{ position: relative; z-index: 10; }
 
 .nav-cta:hover{ opacity:.95; }
 
-.club-mark{
-  width:78px;
-  height:78px;
-  object-fit:contain;
-  filter: drop-shadow(0 0 18px rgba(255,204,0,.25));
-}
+/* (intentionally defined above) */
 
 .nav-links a:hover{
   color: #ffcc00;
@@ -928,3 +931,8 @@ main, header, footer, section{ position: relative; z-index: 10; }
   align-items:center;
 }
 .brand-link{ display:flex; align-items:center; }
+
+/* Center a single "solo" officer card on wide layouts */
+@media (min-width: 981px){
+  .officer-card.solo{ grid-column: 2; }
+}
